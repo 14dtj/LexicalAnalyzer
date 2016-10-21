@@ -1,0 +1,12 @@
+package lex;
+
+import lex.algorithm.*;
+
+public class Main {
+	
+	public static void main(String[] args){
+	    double x = 3.2;
+		Lexlogic lexLogic=new Lexlogic();
+		lexLogic.entrence();
+	}
+}

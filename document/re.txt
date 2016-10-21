@@ -1,0 +1,6 @@
+variable->letter(letter|digit)*
+//0+ not included
+int->digit digit*
+double->digit digit* . digit digit*
+digit->[0-9]
+letter->[a-zA-Z]
