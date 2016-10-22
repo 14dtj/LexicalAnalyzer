@@ -18,6 +18,7 @@ public class LexicalData {
         initMaps(operatorMap, opPath);
     }
 
+
     public int isReservedWord(String str) {
         return getId(str, reservedWordMap);
     }
@@ -36,7 +37,10 @@ public class LexicalData {
 
     private int getId(String str, Map<String, String> map) {
         String value = map.get(str);
-        int result = Integer.parseInt(value);
+        int result = -1;
+        if (value != null) {
+            result = Integer.parseInt(value);
+        }
         return result;
     }
 

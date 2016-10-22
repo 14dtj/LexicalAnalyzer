@@ -31,16 +31,15 @@ public class IOHelper {
         return dataList;
     }
 
-    public static void writeFile(Map<String, String> map) {
+    public static void writeFile(List<String> list) {
         String path = "file/output.txt";
         File file = new File(path);
-        FileWriter fw = null;
+        FileWriter fw;
         try {
             fw = new FileWriter(file);
             BufferedWriter writer = new BufferedWriter(fw);
-            Iterator iterator = map.entrySet().iterator();
-            while (iterator.hasNext()) {
-                writer.write(iterator.next().toString());
+            for (String str : list) {
+                writer.write(str);
                 writer.newLine();
             }
             writer.flush();

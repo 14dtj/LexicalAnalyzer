@@ -8,5 +8,8 @@ public class Main {
 	    double x = 3.2;
 		Lexlogic lexLogic=new Lexlogic();
 		lexLogic.entrence();
+		if(x<=0){
+		    return 0;
+		}
 	}
 }
